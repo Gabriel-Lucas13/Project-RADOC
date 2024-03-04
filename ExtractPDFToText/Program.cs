@@ -64,7 +64,7 @@ class ExtratorTextoPDF // Extrair texto do PDF na Pasta Destino.
         }
     }
 
-    private void ProcessarPaginas(PdfDocument document, StreamWriter sw)
+    private void ProcessarPaginas(PdfDocument document, StreamWriter sw) // Processar páginas se o PDF possuir mais de uma.
     {
         foreach (var page in document.Pages)
         {
@@ -73,7 +73,7 @@ class ExtratorTextoPDF // Extrair texto do PDF na Pasta Destino.
         }
     }
 
-    private void EscreverNoArquivo(StreamWriter sw, string texto)
+    private void EscreverNoArquivo(StreamWriter sw, string texto) // Escrever no arquivo TXT gerado.
     {
         sw.WriteLine(texto);
     }
